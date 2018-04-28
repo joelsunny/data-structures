@@ -100,37 +100,3 @@ void stack<T>::print() {
     }
 
 }
-
-int main() {
-
-    stack<char> s('j')  ;
-    s.push('o') ;
-    s.push('e') ;
-    s.push('l') ;
-    s.push('s') ;
-    printf("\nsize = %d\n", s.size()) ;
-    // s.print() ;
-    printf("top : %c\n", s.top());
-    printf("pop : %c\n", s.pop());
-    printf("pop : %c\n", s.pop());
-    printf("pop : %c\n", s.pop());
-
-    s.push('o') ;
-    s.push('e') ;
-    s.push('l') ;
-    s.push('s') ;
-    printf("top : %c\n", s.top());
-    printf("pop : %c\n", s.pop());
-    printf("pop : %c\n", s.pop());
-    printf("pop : %c\n", s.pop());
-    printf("pop : %c\n", s.pop());
-    printf("pop : %c\n", s.pop());
-    printf("pop : %c\n", s.pop());
-
-    s.print() ;
-    // printf("\nsize = %d\n", s.size()) ;
-    // s.pop() ;
-    // printf("\nsize = %d\n", s.size()) ;
-    // printf("\nend\n") ;
-    return 0 ;
-}
