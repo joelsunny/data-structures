@@ -1,4 +1,5 @@
-#include <stdio.h>
+#ifndef _Stack_
+#define _Stack_
 
 template <class T>
 
@@ -31,3 +32,5 @@ class stack {
         node<T>* head  = nullptr ;
 
 };
+
+#endif
