@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+        <form action="/action_page.php" method="get">
+            <input id='uin' list="browsers" name="browser" onkeyup="myFunction()" >
+            <datalist id="browsers">
+            </datalist>
+        </form>
+          <script>
+                function myFunction() {
+                    var options = '';
+                    var myoptions = new Array();
+                    var prefix = '';
+                    prefix = document.getElementById('uin').value;
+                    console.log(prefix)
+                    fetch("http:127.0.0.1:5000/autocomplete/" + prefix, {mode: 'cors'})
+                        .then(function(response) {
+                            return response.json();
+                        })
+                        .then(function(myJson) {
+                            console.log(JSON.stringify(myJson));
+                            for(var i = 0; i < myJson["list"].length; i++)
+                                options += '<option value="'+myJson["list"][i]+'" />';
+
+                                document.getElementById('browsers').innerHTML = options;
+                        });
+                        
+                        
+                }
+          </script>
+
+</body>
+</html>
