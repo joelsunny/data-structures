@@ -5,5 +5,7 @@
 - https://www.hackerearth.com/practice/data-structures/advanced-data-structures/trie-keyword-tree/tutorial/
 - https://towardsdatascience.com/implementing-auto-complete-with-postgres-and-python-e03d34824079
 
-## Todo
-- [ ] Implement an autocompletion api
+## Applications
+**simple autocompletion web app**
+
+Dependencies: Flask-API, flask-cors
